@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(3);
+  }
+}
+
+.spinner {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  div {
+    text-align: center;
+  }
+
+  span {
+    background: $theme-red;
+    box-shadow: 0 0 15px $white;
+    display: inline-block;
+    height: 15px;
+    width: 3px;
+    margin: 0 5px;
+
+    @for $i from 1 through 15 {
+      &:nth-of-type(#{$i}) {
+        animation: wave 0.8s linear #{$i * 0.3s} infinite alternate forwards;
+      }
+    }
+  }
+
+  p {
+    color: $theme-red;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-shadow: 0 0 10px $white;
+  }
+}

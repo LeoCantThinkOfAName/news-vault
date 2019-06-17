@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Old Standard TT", serif;
+}
+
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: $black;
+  min-height: 100%;
+}
+
+.main-wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+input {
+  outline: none;
+}
+
+input[type="date"] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
