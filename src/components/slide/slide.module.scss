@@ -37,7 +37,13 @@
   font-size: 1.15rem;
   line-height: 1.5rem;
   margin: 1.5rem 0 0;
-  max-width: 600px;
+  max-width: 800px;
+  width: 100%;
+
+  p {
+    max-width: 600px;
+    text-align: justify;
+  }
 }
 
 .lead-char {
@@ -48,6 +54,8 @@
 
 .keep-reading {
   align-self: flex-end;
+  display: block;
+  float: right;
   color: $white;
   margin: 1rem 0;
 }

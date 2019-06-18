@@ -59,26 +59,29 @@ const Slide = memo(() => {
 
   return (
     singleNews && (
-      <div style={{ color: "#fff" }} className={style["slide"]}>
+      <div className={style["slide"]}>
         <Poster news={singleNews} src={getJumbo()} />
         <div className={[style["text"], "container"].join(" ")}>
           <h2 className={style["title"]}>{singleNews.headline.main}</h2>
-          <p className={style["summary"]}>
-            <span className={style["lead-char"]}>
-              {singleNews.lead_paragraph.charAt(0)}
-            </span>
-            <span className={style["summary-main"]}>
-              {singleNews.lead_paragraph.substr(1)}
-            </span>
-          </p>
-          <a
-            href={singleNews.web_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={style["keep-reading"]}
-          >
-            Read On New York Tims Website...
-          </a>
+          <div className={style["summary"]}>
+            <p>
+              <span className={style["lead-char"]}>
+                {singleNews.lead_paragraph.charAt(0)}
+              </span>
+              <span className={style["summary-main"]}>
+                {singleNews.lead_paragraph.substr(1)}
+              </span>
+            </p>
+
+            <a
+              href={singleNews.web_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style["keep-reading"]}
+            >
+              Read On New York Tims Website...
+            </a>
+          </div>
         </div>
       </div>
     )

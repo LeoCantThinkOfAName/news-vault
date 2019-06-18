@@ -29,10 +29,15 @@ body {
 .header,
 .footer {
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .container {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 20px;
+  width: 100%;
 }
 
 input {
@@ -48,4 +53,9 @@ input[type="date"] {
   &::-webkit-calendar-picker-indicator {
     display: none;
   }
+}
+
+// calendar override
+.react-calendar__tile--active {
+  background: $theme-red;
 }

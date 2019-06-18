@@ -33,7 +33,7 @@
 
     @for $i from 1 through 15 {
       &:nth-of-type(#{$i}) {
-        animation: wave 0.8s linear #{$i * 0.3s} infinite alternate forwards;
+        animation: wave 0.5s linear #{$i * 0.1s} infinite alternate forwards;
       }
     }
   }

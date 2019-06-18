@@ -28,18 +28,25 @@ const Header = memo(() => {
   };
 
   return (
-    <header className={[style["header"], "container", "header"].join(" ")}>
-      <h1 className={style["logo"]}>❮NewsVault❯</h1>
-      <div>
-        <button onClick={() => handleRefresh()}>REFRESH</button>
-        <input
-          className={style["date-input"]}
-          type="date"
-          readOnly
-          value={moment(date).format("YYYY-MM-DD")}
-          onClick={() => handleFocus()}
-        />
-        <CustomCalendar activate={activate} setActivate={setActivate} />
+    <header className={[style["header"], "header"].join(" ")}>
+      <div className={[style["header-wrapper"], "container"].join(" ")}>
+        <h1 className={style["logo"]}>❮NewsVault❯</h1>
+        <div className={style["controls"]}>
+          <button
+            className={style["refresh-btn"]}
+            onClick={() => handleRefresh()}
+          >
+            More On This Day...
+          </button>
+          <input
+            className={style["date-input"]}
+            type="date"
+            readOnly
+            value={moment(date).format("YYYY-MM-DD")}
+            onClick={() => handleFocus()}
+          />
+          <CustomCalendar activate={activate} setActivate={setActivate} />
+        </div>
       </div>
     </header>
   );
