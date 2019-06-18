@@ -1,5 +1,5 @@
 import axios from "axios";
-import { UPDATE_SINGLENEWS, UPDATE_BANNED } from "./../../contexts/MainContext";
+import { UPDATE_SINGLENEWS, UPDATE_BANNED } from "../contexts/MainContext";
 
 export const FetchSingleNews = (news: any, callback: any) => {
   const APIKEY = process.env.REACT_APP_API_KEY;

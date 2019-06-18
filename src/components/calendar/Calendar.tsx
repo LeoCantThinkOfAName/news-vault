@@ -6,7 +6,7 @@ import Calendar from "react-calendar";
 import { MainContext, UPDATE_DATE } from "./../../contexts/MainContext";
 
 // helper
-import { CalculateNYT } from "./../Helper/CalculateNYT";
+import { CalculateNYT } from "../../Helper/CalculateNYT";
 
 // styles
 import style from "./calendar.module.scss";

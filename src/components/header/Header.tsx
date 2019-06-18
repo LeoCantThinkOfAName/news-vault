@@ -5,7 +5,7 @@ import moment from "moment";
 import { MainContext, UPDATE_LOADING } from "./../../contexts/MainContext";
 
 // helper
-import { FetchSingleNews } from "./../Helper/FetchSingleNews";
+import { FetchSingleNews } from "../../Helper/FetchSingleNews";
 
 // components
 import CustomCalendar from "./../calendar/Calendar";

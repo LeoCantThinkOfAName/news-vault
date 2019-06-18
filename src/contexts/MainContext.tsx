@@ -2,9 +2,9 @@ import React, { createContext, useEffect, useReducer } from "react";
 import moment from "moment";
 
 // helper
-import { CalculateNYT } from "./../components/Helper/CalculateNYT";
-import { FetchNews } from "../components/Helper/FetchNews";
-import { FetchSingleNews } from "./../components/Helper/FetchSingleNews";
+import { CalculateNYT } from "../Helper/CalculateNYT";
+import { FetchNews } from "../Helper/FetchNews";
+import { FetchSingleNews } from "../Helper/FetchSingleNews";
 
 export const UPDATE_DATE = "UPDATE_DATE";
 export const UPDATE_NEWS = "UPDATE_NEWS";
