@@ -1,10 +1,12 @@
 @import "../../styles/variables.scss";
 
 .footer {
+  align-items: center;
   background-image: linear-gradient(to top, rgba($black, 0.5), rgba($black, 0));
   color: $white;
+  display: flex;
   font-size: 0.8rem;
-  text-align: center;
+  justify-content: center;
 
   a {
     color: $white;
@@ -12,5 +14,9 @@
     &:hover {
       color: rgba($white, 0.8);
     }
+  }
+
+  img {
+    margin: 0 1rem;
   }
 }
