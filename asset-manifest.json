@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/news-vault/static/css/main.d8c56e20.chunk.css",
+    "main.js": "/news-vault/static/js/main.5f2c8a70.chunk.js",
+    "main.js.map": "/news-vault/static/js/main.5f2c8a70.chunk.js.map",
+    "runtime~main.js": "/news-vault/static/js/runtime~main.f15583e7.js",
+    "runtime~main.js.map": "/news-vault/static/js/runtime~main.f15583e7.js.map",
+    "static/css/2.c51b6406.chunk.css": "/news-vault/static/css/2.c51b6406.chunk.css",
+    "static/js/2.44107b2d.chunk.js": "/news-vault/static/js/2.44107b2d.chunk.js",
+    "static/js/2.44107b2d.chunk.js.map": "/news-vault/static/js/2.44107b2d.chunk.js.map",
+    "index.html": "/news-vault/index.html",
+    "precache-manifest.e243fbbabb18896fbbead6cab9551e37.js": "/news-vault/precache-manifest.e243fbbabb18896fbbead6cab9551e37.js",
+    "service-worker.js": "/news-vault/service-worker.js",
+    "static/css/2.c51b6406.chunk.css.map": "/news-vault/static/css/2.c51b6406.chunk.css.map",
+    "static/css/main.d8c56e20.chunk.css.map": "/news-vault/static/css/main.d8c56e20.chunk.css.map"
+  }
+}
