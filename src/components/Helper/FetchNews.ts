@@ -1,4 +1,6 @@
 import axios from "axios";
+import { UPDATE_NEWS } from "../../contexts/MainContext";
+import { UPDATE_BANNED } from "./../../contexts/MainContext";
 
 export const FetchNews = (date: string, callback: any) => {
   const APIKEY = process.env.REACT_APP_API_KEY;
@@ -17,7 +19,7 @@ export const FetchNews = (date: string, callback: any) => {
       params,
     })
     .then(res => {
-      callback(res.data.response.docs);
+      callback({ type: UPDATE_NEWS, payload: res.data.response.docs });
     })
-    .catch(err => callback([]));
+    .catch(err => callback({ type: UPDATE_BANNED, payload: true }));
 };

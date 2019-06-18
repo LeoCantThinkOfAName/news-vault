@@ -1,4 +1,5 @@
 import axios from "axios";
+import { UPDATE_SINGLENEWS, UPDATE_BANNED } from "./../../contexts/MainContext";
 
 export const FetchSingleNews = (news: any, callback: any) => {
   const APIKEY = process.env.REACT_APP_API_KEY;
@@ -14,6 +15,8 @@ export const FetchSingleNews = (news: any, callback: any) => {
     .get(ENDPOINT, {
       params,
     })
-    .then(res => callback(res.data.response.docs[0]))
-    .catch(err => callback(null));
+    .then(res =>
+      callback({ type: UPDATE_SINGLENEWS, payload: res.data.response.docs[0] })
+    )
+    .catch(err => callback({ type: UPDATE_BANNED, payload: true }));
 };

@@ -39,7 +39,9 @@ const Poster = ({ news, src }: { news: any; src: any }) => {
 };
 
 const Slide = memo(() => {
-  const { singleNews } = useContext(MainContext);
+  const {
+    state: { singleNews },
+  } = useContext(MainContext);
 
   const getJumbo = () => {
     const root = "https://www.nytimes.com/";

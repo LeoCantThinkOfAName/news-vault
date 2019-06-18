@@ -2,7 +2,7 @@ import React, { useState, useContext, memo } from "react";
 import moment from "moment";
 
 // context
-import { MainContext } from "./../../contexts/MainContext";
+import { MainContext, UPDATE_LOADING } from "./../../contexts/MainContext";
 
 // helper
 import { FetchSingleNews } from "./../Helper/FetchSingleNews";
@@ -14,7 +14,10 @@ import CustomCalendar from "./../calendar/Calendar";
 import style from "./header.module.scss";
 
 const Header = memo(() => {
-  const { date, news, setSingleNews, setLoading } = useContext(MainContext);
+  const {
+    state: { date, news },
+    dispatch,
+  } = useContext(MainContext);
   const [activate, setActivate] = useState<boolean>(false);
 
   const handleFocus = () => {
@@ -23,8 +26,8 @@ const Header = memo(() => {
 
   const handleRefresh = () => {
     const randomNum = Math.floor(Math.random() * news.length);
-    setLoading(true);
-    FetchSingleNews(news[randomNum], setSingleNews);
+    dispatch({ type: UPDATE_LOADING, payload: true });
+    FetchSingleNews(news[randomNum], dispatch);
   };
 
   return (

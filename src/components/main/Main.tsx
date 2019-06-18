@@ -11,12 +11,14 @@ import Spinner from "../spinner/Spinner";
 import style from "./main.module.scss";
 
 const Main = () => {
-  const { loading, news, singleNews } = useContext(MainContext);
+  const {
+    state: { loading, banned },
+  } = useContext(MainContext);
 
   return (
     <main className={[style["main"]].join(" ")} style={{ color: "#fff" }}>
       <SlideTransition loading={loading} />
-      <Spinner loading={loading} banned={!news && !singleNews ? true : false} />
+      <Spinner loading={loading} banned={banned} />
     </main>
   );
 };

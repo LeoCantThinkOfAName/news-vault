@@ -3,7 +3,7 @@ import moment from "moment";
 import Calendar from "react-calendar";
 
 // context
-import { MainContext } from "./../../contexts/MainContext";
+import { MainContext, UPDATE_DATE } from "./../../contexts/MainContext";
 
 // helper
 import { CalculateNYT } from "./../Helper/CalculateNYT";
@@ -12,7 +12,10 @@ import { CalculateNYT } from "./../Helper/CalculateNYT";
 import style from "./calendar.module.scss";
 
 const CustomCalendar = memo(({ activate, setActivate }: any) => {
-  const { date, setDate } = useContext(MainContext);
+  const {
+    state: { date },
+    dispatch,
+  } = useContext(MainContext);
   const [ny, setNy] = useState<Date>(new Date());
 
   const deActivate = () => {
@@ -20,13 +23,19 @@ const CustomCalendar = memo(({ activate, setActivate }: any) => {
   };
 
   const handleSelect = (value: any) => {
-    setDate(moment(value).format("YYYY-MM-DD"));
+    dispatch({
+      type: UPDATE_DATE,
+      payload: moment(value).format("YYYY-MM-DD"),
+    });
     deActivate();
   };
 
   useEffect(() => {
     const nyDate = CalculateNYT();
-    setDate(moment(nyDate).format("YYYY-MM-DD"));
+    dispatch({
+      type: UPDATE_DATE,
+      payload: moment(nyDate).format("YYYY-MM-DD"),
+    });
     setNy(nyDate);
   }, []);
 
