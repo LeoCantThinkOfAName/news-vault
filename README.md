@@ -1,7 +1,7 @@
 # \<News Vault\>
 ## Play around New York Times search api with React hooks and Typescript :D
 ---
-<p style="text-align: center">
+<p align="center">
   <img src="./src/images/news-vault.gif" alt="<News Vault>" title="<News Vault>">
 </p>
 
