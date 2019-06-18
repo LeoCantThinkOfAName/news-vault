@@ -1,8 +1,9 @@
 # \<News Vault\>
 ## Play around New York Times search api with React hooks and Typescript :D
 ---
-
-![\<News Vault\>](/src/images/news-vault.gif "\<News Vault\>")
+<p style="text-align: center">
+  <img src="./src/images/news-vault.gif" alt="<News Vault>" title="<News Vault>">
+</p>
 
 This is a tiny side project for practicing react hook and typscript, and is actually the first time using useReducer hook, I liked it a lot :P
 
